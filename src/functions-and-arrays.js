@@ -1,38 +1,107 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
 
+if(a>b) return a
+if(a<b) return b
+if(a=b) return (a||b);
 
+}
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  if ([ ]) return null;
+let word = words.split('')
+let longestWord = 0;
+if (word.lenght === 0) {
+   return 0;
+
+}else{
+  for(let i=0; i<word.lenght; i++){
+    if(word[i].lenght > longestWord){
+      longestWord = word[i]
+    }
+  }
+}
+  return longestWord;
+}
+
+ /* 
+  for(let i=0; i<array.lenght; i++ ) {
+    if (array[i].lenght< array[i+1].lenght){
+      return array[i+1]
+
+     }else {
+      return array[i]
+    }
+
+  }
+} 
+
+console.log(findLongestWord(words))
+*/
 
 
 
 // Iteration #3: Calculate the sum
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10]
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+if (!numbers) return;
+let sum =0;
 
+for (let i=0; i<numbers.lenght; i++){
+    sum = sum + numbers[i];
+
+  }
+
+return sum;
+}
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10]
 
-
+function sum(mixedArr) {
+  if(mixedArr.lenght===0){
+    return 0;
+  }
+ // console.log("comin here?");
+let total= 0;
+  //conesole.log("lenght: "+mixedArr.lenght);
+for (let i=0; i<mixedArr.lenght; i++){
+if(typeof(mixedArr[i])==='number'){
+  total+=mixedArr[i];
+}else{
+  continue;
+  }
+}
+return sum;
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function averageNumbers(numbersAvg) {
+  let sum =0;
+  if (!numbersAvg) return;
+  for (let i=0; i<mnumbersAvg.lenght; i++){
 
-function averageNumbers() {}
+    sum += numbersAvg[i];
 
+}
+return sum /numbersAvg.length;
+
+}
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordArr) {
+  
+
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
